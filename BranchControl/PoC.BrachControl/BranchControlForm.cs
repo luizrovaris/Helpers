@@ -49,6 +49,11 @@ namespace PoC.BrachControl
                 branches = branches.Where(x => x.Name.Contains(textBox_FilterName.Text, StringComparison.InvariantCultureIgnoreCase)).ToList();
             }
 
+            if (!string.IsNullOrWhiteSpace(textBox_FilterOrigin.Text))
+            {
+                branches = branches.Where(x => x.Origin.Contains(textBox_FilterOrigin.Text, StringComparison.InvariantCultureIgnoreCase)).ToList();
+            }
+
             branches = branches.Where(x => x.CreatedDate >= dateTimePicker_CreatedBetween.Value
                                         && x.CreatedDate <= dateTimePicker_CreatedBetweenAnd.Value).ToList();
 

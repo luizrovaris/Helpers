@@ -44,6 +44,8 @@ namespace PoC.BrachControl
             this.button_AddBranch = new System.Windows.Forms.Button();
             this.button_SaveAll = new System.Windows.Forms.Button();
             this.lblBranchesCount = new System.Windows.Forms.Label();
+            this.label_FilterOrigin = new System.Windows.Forms.Label();
+            this.textBox_FilterOrigin = new System.Windows.Forms.TextBox();
             this.groupBox_Branches.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Branches)).BeginInit();
             this.groupBox_Filter.SuspendLayout();
@@ -75,6 +77,8 @@ namespace PoC.BrachControl
             // 
             // groupBox_Filter
             // 
+            this.groupBox_Filter.Controls.Add(this.textBox_FilterOrigin);
+            this.groupBox_Filter.Controls.Add(this.label_FilterOrigin);
             this.groupBox_Filter.Controls.Add(this.label_CreatedBetweenAnd);
             this.groupBox_Filter.Controls.Add(this.dateTimePicker_CreatedBetweenAnd);
             this.groupBox_Filter.Controls.Add(this.dateTimePicker_CreatedBetween);
@@ -129,7 +133,7 @@ namespace PoC.BrachControl
             this.checkBox_FilterActiveOnly.AutoSize = true;
             this.checkBox_FilterActiveOnly.Checked = true;
             this.checkBox_FilterActiveOnly.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_FilterActiveOnly.Location = new System.Drawing.Point(135, 69);
+            this.checkBox_FilterActiveOnly.Location = new System.Drawing.Point(595, 71);
             this.checkBox_FilterActiveOnly.Name = "checkBox_FilterActiveOnly";
             this.checkBox_FilterActiveOnly.Size = new System.Drawing.Size(128, 29);
             this.checkBox_FilterActiveOnly.TabIndex = 2;
@@ -205,6 +209,22 @@ namespace PoC.BrachControl
             this.lblBranchesCount.TabIndex = 13;
             this.lblBranchesCount.Text = "-";
             // 
+            // label_FilterOrigin
+            // 
+            this.label_FilterOrigin.AutoSize = true;
+            this.label_FilterOrigin.Location = new System.Drawing.Point(7, 70);
+            this.label_FilterOrigin.Name = "label_FilterOrigin";
+            this.label_FilterOrigin.Size = new System.Drawing.Size(65, 25);
+            this.label_FilterOrigin.TabIndex = 7;
+            this.label_FilterOrigin.Text = "Origin:";
+            // 
+            // textBox_FilterOrigin
+            // 
+            this.textBox_FilterOrigin.Location = new System.Drawing.Point(135, 67);
+            this.textBox_FilterOrigin.Name = "textBox_FilterOrigin";
+            this.textBox_FilterOrigin.Size = new System.Drawing.Size(454, 31);
+            this.textBox_FilterOrigin.TabIndex = 8;
+            // 
             // BranchControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -250,6 +270,8 @@ namespace PoC.BrachControl
         private System.Windows.Forms.Button button_AddBranch;
         private System.Windows.Forms.Button button_SaveAll;
         private System.Windows.Forms.Label lblBranchesCount;
+        private System.Windows.Forms.TextBox textBox_FilterOrigin;
+        private System.Windows.Forms.Label label_FilterOrigin;
     }
 }
 
