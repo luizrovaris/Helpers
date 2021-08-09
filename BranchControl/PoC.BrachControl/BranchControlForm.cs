@@ -68,6 +68,7 @@ namespace PoC.BrachControl
             dataGridView_Branches.Columns["ReleaseTst"].Visible = false;
             dataGridView_Branches.Columns["ReleasePp"].Visible = false;
             dataGridView_Branches.Columns["ReleaseProd"].Visible = false;
+            dataGridView_Branches.Columns["Scripts"].Visible = false;
 
             dataGridView_Branches.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace PoC.BrachControl.DTO
 {
@@ -14,5 +15,15 @@ namespace PoC.BrachControl.DTO
         public DateTime? ReleasePp { get; set; }
         public DateTime? ReleaseProd { get; set; }
         public bool Active { get; set; }
+        public string Scripts { get; set; }
+
+        [JsonIgnore]
+        public bool HasScripts
+        {
+            get
+            {
+                return !string.IsNullOrWhiteSpace(this.Scripts);
+            }
+        }
     }
 }
