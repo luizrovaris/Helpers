@@ -70,7 +70,21 @@ namespace PoC.BrachControl
             dataGridView_Branches.Columns["ReleaseProd"].Visible = false;
             dataGridView_Branches.Columns["Scripts"].Visible = false;
 
-            dataGridView_Branches.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            int totalWidth = dataGridView_Branches.Width;
+
+            int widthLittle = (int)(totalWidth * 0.04);
+            int widthSmall = (int)(totalWidth * 0.05);
+            int widthMedium = (int)(totalWidth * 0.08);
+            int widthLarge = (int)(totalWidth * 0.25);
+
+            dataGridView_Branches.Columns["Id"].Width = widthLittle;
+            dataGridView_Branches.Columns["Name"].Width = widthLarge;
+            dataGridView_Branches.Columns["Notes"].Width = widthLarge;
+            dataGridView_Branches.Columns["Origin"].Width = widthLarge;
+            dataGridView_Branches.Columns["CreatedDate"].Width = widthMedium;
+            dataGridView_Branches.Columns["Active"].Width = widthSmall;
+            dataGridView_Branches.Columns["HasScripts"].Width = widthMedium;
+            //dataGridView_Branches.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private List<BranchDTO> GetBranchesFromGrid()

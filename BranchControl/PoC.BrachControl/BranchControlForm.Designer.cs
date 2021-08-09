@@ -33,6 +33,8 @@ namespace PoC.BrachControl
             this.groupBox_Branches = new System.Windows.Forms.GroupBox();
             this.dataGridView_Branches = new System.Windows.Forms.DataGridView();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
+            this.textBox_FilterOrigin = new System.Windows.Forms.TextBox();
+            this.label_FilterOrigin = new System.Windows.Forms.Label();
             this.label_CreatedBetweenAnd = new System.Windows.Forms.Label();
             this.dateTimePicker_CreatedBetweenAnd = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_CreatedBetween = new System.Windows.Forms.DateTimePicker();
@@ -44,8 +46,6 @@ namespace PoC.BrachControl
             this.button_AddBranch = new System.Windows.Forms.Button();
             this.button_SaveAll = new System.Windows.Forms.Button();
             this.lblBranchesCount = new System.Windows.Forms.Label();
-            this.label_FilterOrigin = new System.Windows.Forms.Label();
-            this.textBox_FilterOrigin = new System.Windows.Forms.TextBox();
             this.groupBox_Branches.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Branches)).BeginInit();
             this.groupBox_Filter.SuspendLayout();
@@ -66,6 +66,7 @@ namespace PoC.BrachControl
             this.dataGridView_Branches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Branches.Location = new System.Drawing.Point(7, 30);
             this.dataGridView_Branches.Name = "dataGridView_Branches";
+            this.dataGridView_Branches.RowHeadersVisible = false;
             this.dataGridView_Branches.RowHeadersWidth = 62;
             this.dataGridView_Branches.RowTemplate.Height = 33;
             this.dataGridView_Branches.Size = new System.Drawing.Size(1547, 515);
@@ -93,6 +94,22 @@ namespace PoC.BrachControl
             this.groupBox_Filter.TabIndex = 1;
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
+            // 
+            // textBox_FilterOrigin
+            // 
+            this.textBox_FilterOrigin.Location = new System.Drawing.Point(135, 67);
+            this.textBox_FilterOrigin.Name = "textBox_FilterOrigin";
+            this.textBox_FilterOrigin.Size = new System.Drawing.Size(454, 31);
+            this.textBox_FilterOrigin.TabIndex = 8;
+            // 
+            // label_FilterOrigin
+            // 
+            this.label_FilterOrigin.AutoSize = true;
+            this.label_FilterOrigin.Location = new System.Drawing.Point(7, 70);
+            this.label_FilterOrigin.Name = "label_FilterOrigin";
+            this.label_FilterOrigin.Size = new System.Drawing.Size(65, 25);
+            this.label_FilterOrigin.TabIndex = 7;
+            this.label_FilterOrigin.Text = "Origin:";
             // 
             // label_CreatedBetweenAnd
             // 
@@ -208,22 +225,6 @@ namespace PoC.BrachControl
             this.lblBranchesCount.Size = new System.Drawing.Size(19, 25);
             this.lblBranchesCount.TabIndex = 13;
             this.lblBranchesCount.Text = "-";
-            // 
-            // label_FilterOrigin
-            // 
-            this.label_FilterOrigin.AutoSize = true;
-            this.label_FilterOrigin.Location = new System.Drawing.Point(7, 70);
-            this.label_FilterOrigin.Name = "label_FilterOrigin";
-            this.label_FilterOrigin.Size = new System.Drawing.Size(65, 25);
-            this.label_FilterOrigin.TabIndex = 7;
-            this.label_FilterOrigin.Text = "Origin:";
-            // 
-            // textBox_FilterOrigin
-            // 
-            this.textBox_FilterOrigin.Location = new System.Drawing.Point(135, 67);
-            this.textBox_FilterOrigin.Name = "textBox_FilterOrigin";
-            this.textBox_FilterOrigin.Size = new System.Drawing.Size(454, 31);
-            this.textBox_FilterOrigin.TabIndex = 8;
             // 
             // BranchControlForm
             // 
