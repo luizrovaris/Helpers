@@ -31,6 +31,7 @@ namespace PoC.BranchControl
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BranchDetailForm));
             this.groupBox_Detail = new System.Windows.Forms.GroupBox();
+            this.groupBoxScripts = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_BranchDetailReleasePrd = new System.Windows.Forms.Label();
             this.label_BranchDetailReleasePp = new System.Windows.Forms.Label();
@@ -44,18 +45,21 @@ namespace PoC.BranchControl
             this.textBox_BranchDetailOrigin = new System.Windows.Forms.TextBox();
             this.label_BranchDetailCreatedDate = new System.Windows.Forms.Label();
             this.dateTimePicker_BranchDetailCreatedDate = new System.Windows.Forms.DateTimePicker();
-            this.checkBox_BranchDetailActive = new System.Windows.Forms.CheckBox();
             this.linkLabel_BranchDetailReleaseDev = new System.Windows.Forms.LinkLabel();
             this.linkLabel_BranchDetailReleaseTst = new System.Windows.Forms.LinkLabel();
             this.linkLabel_BranchDetailReleasePp = new System.Windows.Forms.LinkLabel();
             this.linkLabel_BranchDetailReleaseProd = new System.Windows.Forms.LinkLabel();
+            this.checkBox_BranchDetailActive = new System.Windows.Forms.CheckBox();
             this.button_Save = new System.Windows.Forms.Button();
+            this.richTextBoxScripts = new System.Windows.Forms.RichTextBox();
             this.groupBox_Detail.SuspendLayout();
+            this.groupBoxScripts.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_Detail
             // 
+            this.groupBox_Detail.Controls.Add(this.groupBoxScripts);
             this.groupBox_Detail.Controls.Add(this.tableLayoutPanel1);
             this.groupBox_Detail.Location = new System.Drawing.Point(13, 13);
             this.groupBox_Detail.Name = "groupBox_Detail";
@@ -63,6 +67,16 @@ namespace PoC.BranchControl
             this.groupBox_Detail.TabIndex = 0;
             this.groupBox_Detail.TabStop = false;
             this.groupBox_Detail.Text = "Detail";
+            // 
+            // groupBoxScripts
+            // 
+            this.groupBoxScripts.Controls.Add(this.richTextBoxScripts);
+            this.groupBoxScripts.Location = new System.Drawing.Point(454, 210);
+            this.groupBoxScripts.Name = "groupBoxScripts";
+            this.groupBoxScripts.Size = new System.Drawing.Size(390, 233);
+            this.groupBoxScripts.TabIndex = 12;
+            this.groupBoxScripts.TabStop = false;
+            this.groupBoxScripts.Text = "Scripts";
             // 
             // tableLayoutPanel1
             // 
@@ -204,18 +218,6 @@ namespace PoC.BranchControl
             this.dateTimePicker_BranchDetailCreatedDate.Size = new System.Drawing.Size(300, 31);
             this.dateTimePicker_BranchDetailCreatedDate.TabIndex = 4;
             // 
-            // checkBox_BranchDetailActive
-            // 
-            this.checkBox_BranchDetailActive.AutoSize = true;
-            this.checkBox_BranchDetailActive.Checked = true;
-            this.checkBox_BranchDetailActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_BranchDetailActive.Location = new System.Drawing.Point(141, 383);
-            this.checkBox_BranchDetailActive.Name = "checkBox_BranchDetailActive";
-            this.checkBox_BranchDetailActive.Size = new System.Drawing.Size(86, 29);
-            this.checkBox_BranchDetailActive.TabIndex = 10;
-            this.checkBox_BranchDetailActive.Text = "Active";
-            this.checkBox_BranchDetailActive.UseVisualStyleBackColor = true;
-            // 
             // linkLabel_BranchDetailReleaseDev
             // 
             this.linkLabel_BranchDetailReleaseDev.AutoSize = true;
@@ -260,6 +262,18 @@ namespace PoC.BranchControl
             this.linkLabel_BranchDetailReleaseProd.Text = "--";
             this.linkLabel_BranchDetailReleaseProd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_BranchDetailRelease_LinkClicked);
             // 
+            // checkBox_BranchDetailActive
+            // 
+            this.checkBox_BranchDetailActive.AutoSize = true;
+            this.checkBox_BranchDetailActive.Checked = true;
+            this.checkBox_BranchDetailActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_BranchDetailActive.Location = new System.Drawing.Point(141, 383);
+            this.checkBox_BranchDetailActive.Name = "checkBox_BranchDetailActive";
+            this.checkBox_BranchDetailActive.Size = new System.Drawing.Size(86, 29);
+            this.checkBox_BranchDetailActive.TabIndex = 10;
+            this.checkBox_BranchDetailActive.Text = "Active";
+            this.checkBox_BranchDetailActive.UseVisualStyleBackColor = true;
+            // 
             // button_Save
             // 
             this.button_Save.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -273,6 +287,14 @@ namespace PoC.BranchControl
             this.button_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // richTextBoxScripts
+            // 
+            this.richTextBoxScripts.Location = new System.Drawing.Point(7, 31);
+            this.richTextBoxScripts.Name = "richTextBoxScripts";
+            this.richTextBoxScripts.Size = new System.Drawing.Size(377, 196);
+            this.richTextBoxScripts.TabIndex = 0;
+            this.richTextBoxScripts.Text = "";
             // 
             // BranchDetailForm
             // 
@@ -290,6 +312,7 @@ namespace PoC.BranchControl
             this.Text = "Branch Detail";
             this.Load += new System.EventHandler(this.BranchDetailForm_Load);
             this.groupBox_Detail.ResumeLayout(false);
+            this.groupBoxScripts.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -318,5 +341,7 @@ namespace PoC.BranchControl
         private System.Windows.Forms.LinkLabel linkLabel_BranchDetailReleaseTst;
         private System.Windows.Forms.LinkLabel linkLabel_BranchDetailReleasePp;
         private System.Windows.Forms.LinkLabel linkLabel_BranchDetailReleaseProd;
+        private System.Windows.Forms.GroupBox groupBoxScripts;
+        private System.Windows.Forms.RichTextBox richTextBoxScripts;
     }
 }
