@@ -25,5 +25,32 @@ namespace PoC.BrachControl.DTO
                 return !string.IsNullOrWhiteSpace(this.Scripts);
             }
         }
+
+        [JsonIgnore]
+        public string Env
+        {
+            get
+            {
+                string env = "local";
+                if (this.ReleaseProd.HasValue)
+                {
+                    env = "Prod";
+                }
+                else if (this.ReleasePp.HasValue)
+                {
+                    env = "PP";
+                }
+                else if (this.ReleaseTst.HasValue)
+                {
+                    env = "TST";
+                }
+                else if (this.ReleaseDev.HasValue)
+                {
+                    env = "Dev";
+                }
+
+                return env;
+            }
+        }
     }
 }

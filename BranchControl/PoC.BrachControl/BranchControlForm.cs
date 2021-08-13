@@ -74,8 +74,8 @@ namespace PoC.BrachControl
 
             int widthLittle = (int)(totalWidth * 0.04);
             int widthSmall = (int)(totalWidth * 0.05);
-            int widthMedium = (int)(totalWidth * 0.08);
-            int widthLarge = (int)(totalWidth * 0.25);
+            int widthMedium = (int)(totalWidth * 0.07);
+            int widthLarge = (int)(totalWidth * 0.24);
 
             dataGridView_Branches.Columns["Id"].Width = widthLittle;
             dataGridView_Branches.Columns["Name"].Width = widthLarge;
@@ -84,6 +84,7 @@ namespace PoC.BrachControl
             dataGridView_Branches.Columns["CreatedDate"].Width = widthMedium;
             dataGridView_Branches.Columns["Active"].Width = widthSmall;
             dataGridView_Branches.Columns["HasScripts"].Width = widthMedium;
+            dataGridView_Branches.Columns["Env"].Width = widthSmall;
             //dataGridView_Branches.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
