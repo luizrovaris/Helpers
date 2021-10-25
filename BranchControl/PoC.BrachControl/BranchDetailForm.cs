@@ -43,6 +43,7 @@ namespace PoC.BranchControl
             linkLabel_BranchDetailReleaseProd.Text = this.SetNullabelDateTime(this.branch.ReleaseProd);
             checkBox_BranchDetailActive.Checked = this.branch.Active;
             richTextBoxScripts.Text = branch.Scripts;
+            richTextBoxConfigs.Text = branch.Configs;
         }
 
         private DateTime? GetNullabelDateTime(LinkLabel component)
@@ -93,6 +94,7 @@ namespace PoC.BranchControl
                 this.branch.ReleaseProd = this.GetNullabelDateTime(linkLabel_BranchDetailReleaseProd);
                 this.branch.Active = checkBox_BranchDetailActive.Checked;
                 this.branch.Scripts = richTextBoxScripts.Text;
+                this.branch.Configs = richTextBoxConfigs.Text;
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
