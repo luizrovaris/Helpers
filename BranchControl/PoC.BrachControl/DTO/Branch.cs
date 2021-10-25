@@ -16,6 +16,7 @@ namespace PoC.BrachControl.DTO
         public DateTime? ReleaseProd { get; set; }
         public bool Active { get; set; }
         public string Scripts { get; set; }
+        public string Configs { get; set; }
 
         [JsonIgnore]
         public bool HasScripts
@@ -23,6 +24,15 @@ namespace PoC.BrachControl.DTO
             get
             {
                 return !string.IsNullOrWhiteSpace(this.Scripts);
+            }
+        }
+
+        [JsonIgnore]
+        public bool HasConfigs
+        {
+            get
+            {
+                return !string.IsNullOrWhiteSpace(this.Configs);
             }
         }
 
