@@ -69,21 +69,27 @@ namespace PoC.BrachControl
             dataGridView_Branches.Columns["ReleasePp"].Visible = false;
             dataGridView_Branches.Columns["ReleaseProd"].Visible = false;
             dataGridView_Branches.Columns["Scripts"].Visible = false;
+            dataGridView_Branches.Columns["Configs"].Visible = false;
 
             int totalWidth = dataGridView_Branches.Width;
 
             int widthLittle = (int)(totalWidth * 0.04);
             int widthSmall = (int)(totalWidth * 0.05);
             int widthMedium = (int)(totalWidth * 0.07);
-            int widthLarge = (int)(totalWidth * 0.24);
+            int widthLarge = (int)(totalWidth * 0.2);
+            int widthVeryLarge = (int)(totalWidth * 0.23);
+
+            dataGridView_Branches.Columns["HasScripts"].HeaderCell.Value = "Scripts?";
+            dataGridView_Branches.Columns["HasConfigs"].HeaderCell.Value = "Configs?";
 
             dataGridView_Branches.Columns["Id"].Width = widthLittle;
-            dataGridView_Branches.Columns["Name"].Width = widthLarge;
+            dataGridView_Branches.Columns["Name"].Width = widthVeryLarge;
             dataGridView_Branches.Columns["Notes"].Width = widthLarge;
             dataGridView_Branches.Columns["Origin"].Width = widthLarge;
             dataGridView_Branches.Columns["CreatedDate"].Width = widthMedium;
             dataGridView_Branches.Columns["Active"].Width = widthSmall;
             dataGridView_Branches.Columns["HasScripts"].Width = widthMedium;
+            dataGridView_Branches.Columns["HasConfigs"].Width = widthMedium;
             dataGridView_Branches.Columns["Env"].Width = widthSmall;
             //dataGridView_Branches.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

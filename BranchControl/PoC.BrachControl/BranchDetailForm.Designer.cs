@@ -32,6 +32,7 @@ namespace PoC.BranchControl
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BranchDetailForm));
             this.groupBox_Detail = new System.Windows.Forms.GroupBox();
             this.groupBoxScripts = new System.Windows.Forms.GroupBox();
+            this.richTextBoxScripts = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_BranchDetailReleasePrd = new System.Windows.Forms.Label();
             this.label_BranchDetailReleasePp = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@ namespace PoC.BranchControl
             this.linkLabel_BranchDetailReleaseProd = new System.Windows.Forms.LinkLabel();
             this.checkBox_BranchDetailActive = new System.Windows.Forms.CheckBox();
             this.button_Save = new System.Windows.Forms.Button();
-            this.richTextBoxScripts = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxConfigs = new System.Windows.Forms.RichTextBox();
             this.groupBox_Detail.SuspendLayout();
             this.groupBoxScripts.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,13 +71,22 @@ namespace PoC.BranchControl
             // 
             // groupBoxScripts
             // 
+            this.groupBoxScripts.Controls.Add(this.richTextBoxConfigs);
             this.groupBoxScripts.Controls.Add(this.richTextBoxScripts);
             this.groupBoxScripts.Location = new System.Drawing.Point(454, 210);
             this.groupBoxScripts.Name = "groupBoxScripts";
             this.groupBoxScripts.Size = new System.Drawing.Size(390, 233);
             this.groupBoxScripts.TabIndex = 12;
             this.groupBoxScripts.TabStop = false;
-            this.groupBoxScripts.Text = "Scripts";
+            this.groupBoxScripts.Text = "Scripts / Configs";
+            // 
+            // richTextBoxScripts
+            // 
+            this.richTextBoxScripts.Location = new System.Drawing.Point(7, 31);
+            this.richTextBoxScripts.Name = "richTextBoxScripts";
+            this.richTextBoxScripts.Size = new System.Drawing.Size(377, 95);
+            this.richTextBoxScripts.TabIndex = 0;
+            this.richTextBoxScripts.Text = "";
             // 
             // tableLayoutPanel1
             // 
@@ -288,13 +298,13 @@ namespace PoC.BranchControl
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
-            // richTextBoxScripts
+            // richTextBoxConfigs
             // 
-            this.richTextBoxScripts.Location = new System.Drawing.Point(7, 31);
-            this.richTextBoxScripts.Name = "richTextBoxScripts";
-            this.richTextBoxScripts.Size = new System.Drawing.Size(377, 196);
-            this.richTextBoxScripts.TabIndex = 0;
-            this.richTextBoxScripts.Text = "";
+            this.richTextBoxConfigs.Location = new System.Drawing.Point(7, 132);
+            this.richTextBoxConfigs.Name = "richTextBoxConfigs";
+            this.richTextBoxConfigs.Size = new System.Drawing.Size(377, 95);
+            this.richTextBoxConfigs.TabIndex = 1;
+            this.richTextBoxConfigs.Text = "";
             // 
             // BranchDetailForm
             // 
@@ -343,5 +353,6 @@ namespace PoC.BranchControl
         private System.Windows.Forms.LinkLabel linkLabel_BranchDetailReleaseProd;
         private System.Windows.Forms.GroupBox groupBoxScripts;
         private System.Windows.Forms.RichTextBox richTextBoxScripts;
+        private System.Windows.Forms.RichTextBox richTextBoxConfigs;
     }
 }
